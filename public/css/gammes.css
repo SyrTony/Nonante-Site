@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "NomDeLaPolice";
+    src: url('/Gammes/police/keep_on_truckin_fw/KeeponTruckin.ttf') format('ttf'),
+         url('/Gammes/police/cozy_caps/cozy/caps.otf') format('otf')
+ 
+  }
+
+body{
+    text-align: center;
+    color: white;
+    background: linear-gradient(45deg,#8BD0E5, #EB64A1, #F7DA5B);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: "caps", sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  
+  h1 {
+    font-family: "KeeponTruckin", sans-serif;
+  }
+  
+  img {
+    width: 30%;
+    border-radius: 10px;
+  
+  }

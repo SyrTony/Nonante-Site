@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10px;
+  font-family: 'DM Sans', sans-serif;
+  transition: background .4s ease-in;
+  background: linear-gradient(45deg,#8BD0E5, #EB64A1, #F7DA5B);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+  flex-direction: column;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#objet-1:checked ~ .cards #bière-8,
+#objet-2:checked ~ .cards #bière-1,
+#objet-3:checked ~ .cards #bière-2,
+#objet-4:checked ~ .cards #bière-3,
+#objet-5:checked ~ .cards #bière-4,
+#objet-6:checked ~ .cards #bière-5,
+#objet-7:checked ~ .cards #bière-6,
+#objet-8:checked ~ .cards #bière-7 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#objet-1:checked ~ .cards #bière-7,
+#objet-2:checked ~ .cards #bière-8,
+#objet-3:checked ~ .cards #bière-1,
+#objet-4:checked ~ .cards #bière-2,
+#objet-5:checked ~ .cards #bière-3,
+#objet-6:checked ~ .cards #bière-4,
+#objet-7:checked ~ .cards #bière-5,
+#objet-8:checked ~ .cards #bière-6 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#objet-1:checked ~ .cards #bière-6,
+#objet-2:checked ~ .cards #bière-7,
+#objet-3:checked ~ .cards #bière-8,
+#objet-4:checked ~ .cards #bière-1,
+#objet-5:checked ~ .cards #bière-2,
+#objet-6:checked ~ .cards #bière-3,
+#objet-7:checked ~ .cards #bière-4,
+#objet-8:checked ~ .cards #bière-5 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* Boutons */
+
+.Boutons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Boutons button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.Boutons button:hover {
+  background-color: #f2f2f2;
+}
